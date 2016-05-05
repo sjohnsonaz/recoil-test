@@ -10,7 +10,7 @@ gulp.task('js:build', function () {
             console.log(error.toString());
             this.emit('end');
         })
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('public/build'));
 });
 
 gulp.task("js:build-watch", function () {
@@ -21,7 +21,7 @@ gulp.task("js:build-watch", function () {
             console.log(error.toString());
             this.emit('end');
         })
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('public/build'));
 });
 
 gulp.task('default', ['js:build']);

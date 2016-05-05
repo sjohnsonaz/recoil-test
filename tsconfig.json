@@ -1,7 +1,27 @@
 {
   "compilerOptions": {
+    "outDir": "public/build",
+    "sourceMap": true,
     "target": "es5",
-    "sourceMap": true
+    "module": "commonjs",
+    "jsx": "react",
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "preserveConstEnums": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "filesGlob": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "!./node_modules/**/*"
+  ],
+  "files": [
+    "./src/tsx/main.tsx"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
   },
   "exclude": [
     "node_modules"

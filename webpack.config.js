@@ -1,16 +1,17 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+//var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 module.exports = {
     module: {
         loaders: [{
             test: /\.tsx?$/,
-            loader: 'ts-loader'
+            loader: 'ts-loader',
+            exclude: /node_modules/
         }, {
             test: /\.css$/,
-            loader: ExtractTextPlugin.extract("style-loader", "css-loader!clean-css-loader!postcss-loader")
+            loader: "style-loader!css-loader!clean-css-loader!postcss-loader"
         }, {
             test: /\.less$/,
-            loader: ExtractTextPlugin.extract("style-loader", "css-loader!clean-css-loader!postcss-loader!less-loader")
+            loader: "style-loader!css-loader!clean-css-loader!postcss-loader!less-loader"
         }]
     },
     resolve: {
@@ -20,7 +21,7 @@ module.exports = {
         filename: "[name].js"
     },
     devtool: 'source-map',
-    plugins: [new ExtractTextPlugin("[name].css")],
+    //plugins: [new ExtractTextPlugin("[name].css")],
     postcss: [autoprefixer({
         browsers: ['last 2 versions']
     })]
