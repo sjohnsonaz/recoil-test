@@ -1,0 +1,25 @@
+{
+  "name": "recoil-test",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^6.3.6",
+    "clean-css-loader": "0.0.1",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "gulp": "^3.9.1",
+    "less-loader": "^2.2.3",
+    "postcss-loader": "^0.8.2",
+    "react-recoil": "^0.3.50",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "webpack-stream": "^3.1.0"
+  }
+}
