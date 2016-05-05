@@ -12,19 +12,10 @@
     "preserveConstEnums": true,
     "suppressImplicitAnyIndexErrors": true
   },
-  "filesGlob": [
-    "./**/*.ts",
-    "./**/*.tsx",
-    "!./node_modules/**/*"
-  ],
-  "files": [
-    "./src/tsx/main.tsx"
-  ],
-  "atom": {
-    "rewriteTsconfig": true
-  },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "typings/browser",
+    "typings/browser.d.ts"
   ],
   "compileOnSave": false
 }
