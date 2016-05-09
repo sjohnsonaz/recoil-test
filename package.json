@@ -21,10 +21,14 @@
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
     "react-recoil": "^0.3.50",
+    "redux": "^3.5.2",
     "style-loader": "^0.13.1",
     "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",
     "typings": "^0.8.1",
     "webpack-stream": "^3.1.0"
+  },
+  "devDependencies": {
+    "redux-devtools": "^3.2.0"
   }
 }
