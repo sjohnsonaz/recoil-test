@@ -3,9 +3,12 @@ var autoprefixer = require('autoprefixer');
 module.exports = {
     module: {
         loaders: [{
-            test: /\.tsx?$/,
-            loader: 'ts-loader',
-            exclude: /node_modules/
+            test: /\.jsx?$/,
+            exclude: /(node_modules|bower_components)/,
+            loader: 'babel-loader',
+            query: {
+                presets: ['react', 'es2015']
+            }
         }, {
             test: /\.css$/,
             loader: "style-loader!css-loader!clean-css-loader!postcss-loader"
@@ -15,7 +18,7 @@ module.exports = {
         }]
     },
     resolve: {
-        extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
+        extensions: ['', '.webpack.js', '.web.js', '.js']
     },
     output: {
         filename: "[name].js"

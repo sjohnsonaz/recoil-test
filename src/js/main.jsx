@@ -1,5 +1,7 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
+import { Router, Route, Link } from 'react-router';
+
 
 //import "react-recoil";
 import "../less/main.less";

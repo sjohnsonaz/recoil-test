@@ -4,7 +4,7 @@ webpackConfig = require('./webpack.config.js');
 
 gulp.task('js:build', function () {
     webpackConfig.watch = false;
-    return gulp.src('src/tsx/main.tsx')
+    return gulp.src('src/js/main.jsx')
         .pipe(webpack(webpackConfig))
         .on('error', function (error) {
             console.log(error.toString());
@@ -15,7 +15,7 @@ gulp.task('js:build', function () {
 
 gulp.task("js:build-watch", function () {
     webpackConfig.watch = true;
-    return gulp.src('src/tsx/main.tsx')
+    return gulp.src('src/js/main.jsx')
         .pipe(webpack(webpackConfig))
         .on('error', function (error) {
             console.log(error.toString());
