@@ -13,7 +13,7 @@ function counter(state = 0, action) {
 
 let store = createStore(counter);
 
-store.subscribe(function() {
+store.subscribe(function () {
     console.log(store.getState());
 });
 store.dispatch({
